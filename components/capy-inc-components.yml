@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.leminnow.com/knowledge/displaying-lemin-captcha + https://registry.npmjs.org (leminnow-dev)
+description: >-
+  Lemin Captcha's client-side, embeddable UI component — the gamified "cropped
+  captcha" puzzle widget that renders in the browser and collects the visitor's
+  encrypted answer. It is mounted into a container element (default id
+  lemin-cropped-captcha) keyed by a public captcha_id obtained from the Lemin
+  Dashboard, then framework wrappers surface it as a native component. Distinct
+  from any server-side SDK: verification of the collected answer is a
+  server-to-server call to the verification API (see
+  conventions/capy-inc-conventions.yml).
+docs:
+- https://help.leminnow.com/knowledge/displaying-lemin-captcha
+- https://help.leminnow.com/knowledge/obtaining-the-javascript-code-for-lemin-captcha
+identifiers:
+  captcha_id:
+    description: Public site identifier for a configured captcha, taken from the widget script source in the dashboard.
+    source: https://dashboard.leminnow.com/products/captcha-list
+  container_id:
+    description: DOM element id the widget renders into; set in a captcha's advanced settings.
+    default: lemin-cropped-captcha
+families:
+  cropped_captcha_widget:
+    description: The gamified puzzle CAPTCHA widget rendered client-side.
+    frameworks:
+    - {name: VanillaJS, delivery: dashboard-generated script tag + container div}
+    - {name: React, package: "@leminnow/react-lemin-cropped-captcha"}
+    - {name: Angular, package: "@leminnow/ng-lemin-cropped-captcha"}
+    - {name: Vue, package: "@leminnow/vue-lemin-cropped-captcha"}

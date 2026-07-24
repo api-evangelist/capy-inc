@@ -1,0 +1,14 @@
+{
+  "provider": "capy-inc",
+  "sources": [
+    "capy-inc-verification-api-openapi.yml"
+  ],
+  "outputs": [
+    "capy-inc-verification-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

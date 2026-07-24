@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: searched
+source: https://registry.npmjs.org (publisher leminnow-dev) + https://help.leminnow.com/knowledge/developers-guide
+description: >-
+  First-party Lemin Captcha client-side widget wrappers, published to npm by
+  leminnow-dev and confirmed via the public npm registry. These mount the
+  gamified puzzle CAPTCHA in the browser; server-side answer verification is a
+  plain HTTPS POST to api.leminnow.com and does not require a package. No
+  first-party server SDK (Python/PHP/Ruby/Go) was found on the public
+  registries at fetch time.
+packages:
+- language: javascript
+  registry: npm
+  name: "@leminnow/react-lemin-cropped-captcha"
+  url: https://www.npmjs.com/package/@leminnow/react-lemin-cropped-captcha
+  source: https://github.com/leminnow/lemin_cropped_captcha_react_wrapper
+  install: npm install @leminnow/react-lemin-cropped-captcha
+  version: 0.2.0
+  official: true
+  note: React component wrapper for the Lemin cropped captcha widget.
+- language: javascript
+  registry: npm
+  name: "@leminnow/ng-lemin-cropped-captcha"
+  url: https://www.npmjs.com/package/@leminnow/ng-lemin-cropped-captcha
+  source: https://github.com/leminnow/lemin_cropped_captcha_ng_wrapper
+  install: npm install @leminnow/ng-lemin-cropped-captcha
+  version: 0.6.1
+  official: true
+  note: Angular component wrapper for the Lemin cropped captcha widget.
+- language: javascript
+  registry: npm
+  name: "@leminnow/vue-lemin-cropped-captcha"
+  url: https://www.npmjs.com/package/@leminnow/vue-lemin-cropped-captcha
+  source: https://github.com/leminnow/lemin_cropped_captcha_vue_wrapper
+  install: npm install @leminnow/vue-lemin-cropped-captcha
+  version: 0.2.0
+  official: true
+  note: Vue component wrapper for the Lemin cropped captcha widget.

@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/capy-inc-captcha-openapi.yml + https://help.leminnow.com/knowledge/developers-guide
+description: >-
+  Lifecycle and versioning posture for the Lemin Captcha Verification API,
+  derived from the URI-path version and the developer documentation. No public
+  deprecation policy, SLA, or status page was found at the generated date.
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://help.leminnow.com/knowledge/developers-guide
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No published deprecation/sunset policy found.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+deprecated_operations: []

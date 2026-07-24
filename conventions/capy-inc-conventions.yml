@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.leminnow.com/knowledge/developers-guide
+description: >-
+  Cross-cutting request/response conventions for the Lemin Captcha Verification
+  API, from Lemin's developer documentation and the derived OpenAPI. This is a
+  single-purpose verification API, so several conventions (pagination, field
+  expansion, cursors) do not apply.
+base_url: https://api.leminnow.com
+api_style: REST over HTTPS, JSON request and response bodies
+authentication:
+  scheme: Secret private_key submitted in the JSON request body (server-side only) + public captcha_id for the client widget
+  detail: authentication/capy-inc-authentication.yml
+content_type:
+  request: application/json (required)
+  response: application/json
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key mechanism is documented. Verification is inherently
+    single-use — a challenge_id is consumed once and returns
+    challenge_is_not_active on reuse.
+pagination:
+  supported: false
+  note: Single verification endpoint; no list operations.
+versioning:
+  scheme: uri-path
+  current: v1
+  example: /captcha/v1/cropped/validate
+error_envelope:
+  style: custom
+  http_status: 200 for both success and failure
+  fields: [success, message, code]
+  detail: errors/capy-inc-error-codes.yml
+rate_limit_signaling:
+  documented: false
+  note: >-
+    Usage is metered by puzzle images per month (see plans/capy-inc-plans.yml);
+    no per-request rate-limit headers are documented.

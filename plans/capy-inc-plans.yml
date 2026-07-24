@@ -1,0 +1,19 @@
+generated: '2026-07-18'
+method: searched
+source: https://leminnow.com/pricing
+description: >-
+  Lemin Captcha pricing, metered by puzzle images served per month. A perpetual
+  free tier covers the first 5,000 puzzle images each month; beyond that,
+  additional images are billed pay-as-you-go.
+currency: USD
+metric: puzzle images per month
+plans:
+- name: Free
+  price: 0
+  included: 5000 puzzle images per month
+  signup: https://dashboard.leminnow.com/auth/signup
+- name: Pay-as-you-go
+  price_per_unit: 0.001
+  unit: puzzle image
+  note: Applies to puzzle images beyond the 5,000/month free allotment.
+  signup: https://dashboard.leminnow.com/auth/signup

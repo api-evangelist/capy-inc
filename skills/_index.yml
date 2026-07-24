@@ -1,0 +1,8 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/capy-inc-captcha-openapi.yml
+skills:
+- file: capy-inc-verify-captcha.md
+  name: Verify a Lemin CAPTCHA answer
+  api: openapi/capy-inc-captcha-openapi.yml
+  operations: [validateCroppedCaptcha]

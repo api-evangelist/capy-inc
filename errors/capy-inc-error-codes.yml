@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+source: https://help.leminnow.com/knowledge/verification-result
+description: >-
+  Error/result code registry for the Lemin Captcha Verification API. The
+  verification endpoint always responds HTTP 200; the outcome is carried in a
+  JSON envelope, and failures include a machine-readable code and human-readable
+  message. This is not RFC 9457 problem+json — it is Lemin's own compact result
+  envelope.
+format: custom-envelope
+envelope:
+  content_type: application/json
+  fields:
+    success: boolean — whether verification succeeded
+    message: string or null — human-readable failure description
+    code: string or null — machine-readable failure identifier
+  http_status: 200 for all responses (success and failure)
+error_codes:
+- code: incorrect_answer
+  message: Incorrect Answer
+  meaning: The submitted answer did not solve the challenge.
+  remediation: Ask the visitor to retry the puzzle.
+- code: invalid_parameters
+  message: Invalid Parameters
+  meaning: One or more required fields (private_key, challenge_id, answer) are missing or malformed.
+  remediation: Verify all three fields are present and valid JSON with content-type application/json.
+- code: invalid_challenge_id
+  message: Invalid challange_id
+  meaning: The challenge_id is not recognized.
+  remediation: Use the challenge_id returned by the client-side widget for this session.
+- code: invalid_private_key
+  message: Invalid private_key
+  meaning: The account private_key is not valid.
+  remediation: Use the private (account) key from the Lemin Dashboard; keep it server-side.
+- code: challenge_is_not_active
+  message: Challenge Is Not Active
+  meaning: The challenge has expired or was already consumed.
+  remediation: Generate a fresh challenge; do not reuse or delay verification.
+- code: invalid_cropped_captcha
+  message: null
+  meaning: The cropped-captcha payload is invalid.
+  remediation: Ensure the widget-produced answer is passed through unmodified.

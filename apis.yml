@@ -1,7 +1,16 @@
 aid: capy-inc
 name: Capy Inc.
-description: Capy Inc. is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Capy Inc. operates Lemin Captcha, a gamified bot-prevention and CAPTCHA
+  service that replaces traditional image-selection challenges with playful,
+  brandable puzzle games. Lemin protects websites and apps from automated
+  attacks such as account takeover and credential stuffing while improving the
+  human experience: the company reports puzzles are solved in roughly five
+  seconds (versus eighteen for legacy CAPTCHAs) with far lower abandonment.
+  Developers embed a client-side widget (available as first-party React,
+  Angular, and Vue components on npm), then verify the visitor's encrypted
+  answer server-side against the Lemin verification API using their account
+  private key. Capy Inc. is a 500 Global portfolio company.
 url: https://raw.githubusercontent.com/api-evangelist/capy-inc/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,17 +18,107 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://leminnow.com/favicon.ico
 tags:
 - Company
-apis: []
+- Security
+- CAPTCHA
+- Bot Detection
+- Bot Prevention
+- Fraud Prevention
+- Account Takeover
+- Authentication
+- Web Security
+- Developer Tools
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: capy-inc:capy-inc-verification-api
+  name: Capy Inc. Verification API
+  description: Server-side CAPTCHA answer verification.
+  humanURL: https://help.leminnow.com/knowledge/developers-guide
+  baseURL: https://api.leminnow.com
+  tags:
+  - Verification
+  properties:
+  - type: OpenAPI
+    url: openapi/capy-inc-verification-api-openapi.yml
+  - type: Documentation
+    url: https://help.leminnow.com/knowledge/verifying-a-lemin-captcha-answer
 common:
 - type: Website
   url: https://leminnow.com
+- type: DeveloperPortal
+  url: https://help.leminnow.com/knowledge/developers-guide
+- type: Documentation
+  url: https://help.leminnow.com/knowledge/developers-guide
+- type: APIReference
+  url: https://help.leminnow.com/knowledge/verifying-a-lemin-captcha-answer
+- type: GettingStarted
+  url: https://help.leminnow.com/knowledge/obtaining-the-javascript-code-for-lemin-captcha
+- type: Support
+  url: https://help.leminnow.com/knowledge/faqs
+- type: Pricing
+  url: https://leminnow.com/pricing
+- type: SignUp
+  url: https://dashboard.leminnow.com/auth/signup
+- type: Login
+  url: https://dashboard.leminnow.com/auth/login
+- type: TermsOfService
+  url: https://leminnow.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://leminnow.com/privacy-policy
+- type: GitHubOrganization
+  url: https://github.com/leminnow
+- type: Packages
+  url: packages/capy-inc-packages.yml
+- type: SDKs
+  url: packages/capy-inc-packages.yml
+- type: Components
+  url: components/capy-inc-components.yml
+- type: Authentication
+  url: authentication/capy-inc-authentication.yml
+- type: Conventions
+  url: conventions/capy-inc-conventions.yml
+- type: ErrorCatalog
+  url: errors/capy-inc-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/capy-inc-lifecycle.yml
+- type: Conformance
+  url: conformance/capy-inc-conformance.yml
+- type: DataModel
+  url: data-model/capy-inc-data-model.yml
+- type: MCPServer
+  url: mcp/capy-inc-mcp.yml
+- type: LLMsTxt
+  url: llms/capy-inc-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Plans
+  url: plans/capy-inc-plans.yml
+- type: DomainSecurity
+  url: security/capy-inc-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

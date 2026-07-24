@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/capy-inc-captcha-openapi.yml + https://help.leminnow.com/knowledge/developers-guide
+description: >-
+  Entity model derived from the Lemin Captcha Verification API and developer
+  docs. The domain is small: a Captcha configuration (identified by a public
+  captcha_id) issues Challenge instances, each identified by a challenge_id and
+  solved with an encrypted answer, verified against an account private_key.
+entities:
+- name: Captcha
+  description: A configured captcha in the Lemin Dashboard.
+  identifier: captcha_id
+  id_type: uuid
+  fields: [captcha_id, container_id]
+  relationships:
+  - {type: has_many, target: Challenge, via: challenge_id}
+- name: Challenge
+  description: A single CAPTCHA puzzle instance presented to a visitor.
+  identifier: challenge_id
+  id_type: uuid
+  fields: [challenge_id, answer, active]
+  relationships:
+  - {type: belongs_to, target: Captcha, via: captcha_id}
+- name: Account
+  description: The customer account holding the verification credentials.
+  identifier: private_key
+  id_type: uuid
+  fields: [private_key]
+  relationships:
+  - {type: has_many, target: Captcha, via: captcha_id}
