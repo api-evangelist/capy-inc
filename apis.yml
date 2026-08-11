@@ -65,6 +65,8 @@ apis:
   - type: Documentation
     url: https://help.leminnow.com/knowledge/verifying-a-lemin-captcha-answer
 common:
+- type: Overlay
+  url: overlays/capy-inc-captcha-overlay.yaml
 - type: Website
   url: https://leminnow.com
 - type: DeveloperPortal
