@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemin Captcha Verification API",
+    "version": "v1"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Verification",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Verify a Lemin cropped-captcha answer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.leminnow.com/captcha/v1/cropped/validate",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Validate the encrypted answer a visitor produced for a Lemin cropped (gamified puzzle) CAPTCHA challenge. Call this from your back end only; the `private_key` must never be sent from the browser. The endpoint always responds with HTTP 200 and a JSON body whose `success` boolean carries the verification outcome; failures include a machine-readable `code` and human-readable `message`."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

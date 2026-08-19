@@ -2,11 +2,9 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: openapi/capy-inc-captcha-openapi.yml
-description: >-
-  Candidate MCP server tool surface derived from the Lemin Captcha Verification
-  API. Lemin/Capy Inc. does not publish an official hosted or packaged MCP
-  server (none found on the MCP registry, npm @modelcontextprotocol, or the
-  docs) as of the generated date; this is a suggested mapping of the documented
+description: Candidate MCP server tool surface derived from the Lemin Captcha Verification API. Lemin/Capy
+  Inc. does not publish an official hosted or packaged MCP server (none found on the MCP registry, npm
+  @modelcontextprotocol, or the docs) as of the generated date; this is a suggested mapping of the documented
   operation to an MCP tool, not a published server.
 server:
   name: capy-inc-lemin-captcha
@@ -15,3 +13,9 @@ tools:
 - name: validate_cropped_captcha
   description: Verify a visitor's encrypted Lemin cropped-captcha answer against an account private key.
   source_operation: openapi/capy-inc-captcha-openapi.yml#validateCroppedCaptcha
+deployment:
+  mode: none
+  verified: derived
+  tools: 1
+  checked: '2026-08-12'
+  source: catalog MCP census
