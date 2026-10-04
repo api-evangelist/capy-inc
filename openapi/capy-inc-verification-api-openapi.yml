@@ -63,24 +63,6 @@ paths:
                     code: invalid_private_key
 components:
   schemas:
-    ValidateRequest:
-      type: object
-      required:
-      - private_key
-      - challenge_id
-      - answer
-      properties:
-        private_key:
-          type: string
-          format: uuid
-          description: Your account verification (secret) key from the Lemin Dashboard. Server-side only — never expose to the browser.
-        challenge_id:
-          type: string
-          format: uuid
-          description: Identifier for the specific CAPTCHA challenge instance the visitor solved.
-        answer:
-          type: string
-          description: The encrypted visitor response returned by the client-side widget.
     ValidateResponse:
       type: object
       required:
@@ -107,3 +89,21 @@ components:
           - challenge_is_not_active
           - invalid_cropped_captcha
           - null
+    ValidateRequest:
+      type: object
+      required:
+      - private_key
+      - challenge_id
+      - answer
+      properties:
+        private_key:
+          type: string
+          format: uuid
+          description: Your account verification (secret) key from the Lemin Dashboard. Server-side only — never expose to the browser.
+        challenge_id:
+          type: string
+          format: uuid
+          description: Identifier for the specific CAPTCHA challenge instance the visitor solved.
+        answer:
+          type: string
+          description: The encrypted visitor response returned by the client-side widget.
