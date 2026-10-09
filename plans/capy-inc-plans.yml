@@ -17,3 +17,23 @@ plans:
   unit: puzzle image
   note: Applies to puzzle images beyond the 5,000/month free allotment.
   signup: https://dashboard.leminnow.com/auth/signup
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Free
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Pay-as-you-go
+    access: other
+    model: unstated
+    model_how: derived
+    units:
+    - other
+    periods: []
